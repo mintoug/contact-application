@@ -1,12 +1,12 @@
 import React from "react";
 
 class AddContact extends React.Component {
-state={
+state = {
     name : "",
     email : ""
 }
 
-add =(e) =>{
+add = (e) =>{
     e.preventDefault();
     if(this.state.name ==="" || this.state.email ===""){
         alert(" all the fields are nandatory!");
@@ -25,17 +25,17 @@ render(){
                 <div className="field">
                     <label>Name</label>
                     <input 
-                    type="test" 
+                    type="text" 
                     name="name" 
                     placeholder="Name" 
                     value = {this.state.name}
-                    onChange ={(e) => this.setState({name: e.target.value})}
+                   onChange ={(e) => this.setState({name: e.target.value})}
                     />
                 </div>
                 <div className="field">
                     <label>Email</label>
                     <input 
-                    type="test" 
+                    type="text" 
                     name="email" 
                     placeholder="Email" 
                     value = {this.state.email}
